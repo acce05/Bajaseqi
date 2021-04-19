@@ -6,5 +6,11 @@ module.exports = {
       payload
     );
     return data;
+  },
+  obtenerFicha: async () => {
+    const {data} = await axios.default.get(
+      'http://localhost:4000/fichas'
+    );
+    return data;
   }
 }

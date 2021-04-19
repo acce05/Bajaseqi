@@ -17,7 +17,6 @@ export default function CardSettings() {
     tipoComputo: ""
   });
 
-
   const [componentesI, setComponentesI] = useState({
     tarjetaVideo: {
       nombre: "",
@@ -75,12 +74,69 @@ export default function CardSettings() {
       componentesI,
       componentesII
     }
-    const result = await guardarFicha(payload);
-    console.log(result)
+    await guardarFicha(payload);
+    setFicha({
+      predio: 0,
+      dependenciaFacultad: "",
+      unidadAdministrativa: "",
+      nombreUsuario: "",
+      codigoPatrimonial: "",
+      numeroSerie: "",
+      anexo: "",
+      marca: "",
+      tipoComputo: ""
+    });
+    setComponentesI({
+      tarjetaVideo: {
+        nombre: "",
+        integrado: "",
+        estado: ""
+      },
+      tarjetaSonido: {
+        nombre: "",
+        integrado: "",
+        estado: ""
+      },
+      tarjetaRed: {
+        nombre: "",
+        integrado: "",
+        estado: ""
+      },
+    });
+    setComponentesII({
+      monitor: {
+        nombre: "",
+        codigo: "",
+        estado: ""
+      },
+      impresora: {
+        nombre: "",
+        codigo: "",
+        estado: ""
+      },
+      scanner: {
+        nombre: "",
+        codigo: "",
+        estado: ""
+      },
+      proyector: {
+        nombre: "",
+        codigo: "",
+        estado: ""
+      },
+      telefono: {
+        nombre: "",
+        codigo: "",
+        estado: ""
+      },
+      otro: {
+        nombre: "",
+        codigo: "",
+        estado: ""
+      },
+    })
   }
 
-
-  //console.log(componentesII);
   return (
     <>
       <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
