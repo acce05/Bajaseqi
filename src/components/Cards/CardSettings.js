@@ -107,6 +107,8 @@ export default function CardSettings() {
                       ...ficha,
                       predio: e.target.value
                     })}
+                    //disabled={true}
+                    readOnly={true}
                   />
                 </div>
               </div>
